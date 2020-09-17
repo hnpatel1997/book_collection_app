@@ -1,0 +1,45 @@
+<h1>Welcome to the Book Collection Application</h1>
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to List", books_path, :class => 'back-link') %>
+
+<div class="books show">
+  <h2>Show Book</h2>
+
+  <table summary="Book detail view">
+    <tr>
+      <th>Title</th>
+      <td><%= @book.title %></td>
+    </tr>
+    <tr>
+      <th>Author</th>
+      <td><%= @book.author %></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= @book.price %></td>
+    </tr>
+    <tr>
+      <th>Genre</th>
+      <td><%= @book.genre %></td>
+    </tr>
+    <tr>
+      <th>Publish Date</th>
+      <td><%= @book.publish_date %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @book.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @book.updated_at %></td>
+    </tr>
+  </table>
+
+</div>
